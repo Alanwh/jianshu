@@ -13,6 +13,9 @@ class TodoList extends Component {
         this.handleButtonClick = this.handleButtonClick.bind(this);
         this.handleButtonDelete = this.handleButtonDelete.bind(this);
     }
+    componentWillMount() {
+        console.log('componentWillMount');
+    }
     render() {
         console.log('render...');
         return(
@@ -34,6 +37,23 @@ class TodoList extends Component {
                 </ul>
             </Fragment>
         )
+    }
+    componentDidMount() {
+        console.log('componentDidMount');
+    }
+    componentWillReceiveProps() {
+        // 父组件不执行
+        console.log('componentWillReceiveProps');
+    }
+    shouldComponentUpdate() {
+        console.log('shouldComponentUpdate');
+        return true;
+    }
+    componentWillUpdate() {
+        console.log('componentWillUpdate');
+    }
+    componentDidUpdate() {
+        console.log('componentDidUpdate');
     }
     handleInputChange(e) {
         // let value = e.target.value;

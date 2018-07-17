@@ -8,12 +8,19 @@ class TodoItem extends Component {
         this.handleClick = this.handleClick.bind(this);
     }
     render() {
+        console.log('child render...');
         const { item,test } = this.props;
         return(
             <li 
                 // dangerouslySetInnerHTML={{__html:item}}
                 onClick={this.handleClick}>{item} - {test} - <Test item={item} /> </li>
         )
+    }
+    componentWillReceiveProps() {
+        console.log('child component WillReceiveProps');
+    }
+    componentWillUnmount() {
+        console.log('componentWillUnmount');
     }
     handleClick() {
         const {handleButtonDelete,index} = this.props;
