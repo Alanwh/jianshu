@@ -17,7 +17,7 @@ class TodoList extends Component {
         return(
             <Fragment>
                 <div className='todolist'>
-                    <label htmlFor="insertArea">输入内容: </label>
+                    <label htmlFor="insertArea"> 输入内容: </label>
                     <input 
                         id='insertArea'
                         className='input' 

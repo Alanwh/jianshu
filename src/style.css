@@ -24,5 +24,15 @@ button{
     vertical-align: middle;
 }
 .showList{
-    text-align: center;
+    width: 270px;
+    margin: 0 auto;
+    list-style: none;
+}
+.showList li{
+    line-height: 30px;
+    padding-left: 10px;
+}
+.showList li:hover{
+    background: #369;
+    color: #fff;
 }
