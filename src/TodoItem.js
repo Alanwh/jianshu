@@ -19,6 +19,13 @@ class TodoItem extends Component {
     componentWillReceiveProps() {
         console.log('child component WillReceiveProps');
     }
+    shouldComponentUpdate(nextProps,nextState) {
+        if (nextProps.item !== this.props.item) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     componentWillUnmount() {
         console.log('componentWillUnmount');
     }

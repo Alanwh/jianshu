@@ -1,5 +1,6 @@
 import React,{ Component,Fragment } from 'react';
 import TodoItem from './TodoItem';
+import axios from 'axios';
 import './style.css';
 
 class TodoList extends Component {
@@ -40,6 +41,15 @@ class TodoList extends Component {
     }
     componentDidMount() {
         console.log('componentDidMount');
+        axios.get('/user')
+            .then(function (response) {
+                // handle success
+                console.log(response);
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
     }
     componentWillReceiveProps() {
         // 父组件不执行
