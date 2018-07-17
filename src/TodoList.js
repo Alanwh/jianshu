@@ -14,6 +14,7 @@ class TodoList extends Component {
         this.handleButtonDelete = this.handleButtonDelete.bind(this);
     }
     render() {
+        console.log('render...');
         return(
             <Fragment>
                 <div className='todolist'>

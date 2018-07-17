@@ -1,5 +1,6 @@
 import React,{ Component } from 'react';
 import PropTypes from 'prop-types';
+import Test from './test';
 
 class TodoItem extends Component {
     constructor(props) {
@@ -7,11 +8,12 @@ class TodoItem extends Component {
         this.handleClick = this.handleClick.bind(this);
     }
     render() {
+        console.log('render ---');
         const { item,test } = this.props;
         return(
             <li 
                 // dangerouslySetInnerHTML={{__html:item}}
-                onClick={this.handleClick}>{item} - {test}</li>
+                onClick={this.handleClick}>{item} - {test} - <Test item={item} /> </li>
         )
     }
     handleClick() {
