@@ -24,18 +24,20 @@ class TodoList extends Component {
                         className='input' 
                         type="text" 
                         value={this.state.inputValue} 
-                        onChange={this.handleInputChange} />
+                        onChange={this.handleInputChange}
+                        ref={(input) => {this.input = input}} />
                     <button 
                         onClick={this.handleButtonClick}>提交</button>
                 </div>
-                <ul className='showList'>
+                <ul className='showList' ref={(ul) => {this.ul=ul}}>
                     { this.getTodoItem() }
                 </ul>
             </Fragment>
         )
     }
     handleInputChange(e) {
-        let value = e.target.value;
+        // let value = e.target.value;
+        let value = this.input.value;
         this.setState( () =>({
                 inputValue: value
             })
@@ -43,11 +45,15 @@ class TodoList extends Component {
     }
     handleButtonClick() { 
         if(!this.state.inputValue) return;
-        this.setState(() => ({
-                list: [...this.state.list,this.state.inputValue],
+        this.setState((prevstate) => ({
+                list: [...prevstate.list,prevstate.inputValue],
                 inputValue: ''
-            })
+            }),()=>{
+                console.log(this.ul.querySelectorAll('div').length,'length');
+            }
         );
+        // setState(()=>{}) 箭头函数是异步执行
+        console.log(this.ul.querySelectorAll('div').length,'length');
     }
     handleButtonDelete(index) {
         this.setState(() => {
@@ -68,7 +74,6 @@ class TodoList extends Component {
                         dangerouslySetInnerHTML={{__html:item}}></li>*/}
                     <TodoItem item={item} index={index} handleButtonDelete={this.handleButtonDelete}  />
                 </div>
-                
             ) 
         })
     }

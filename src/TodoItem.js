@@ -8,7 +8,6 @@ class TodoItem extends Component {
         this.handleClick = this.handleClick.bind(this);
     }
     render() {
-        console.log('render ---');
         const { item,test } = this.props;
         return(
             <li 
