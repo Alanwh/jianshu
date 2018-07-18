@@ -41,14 +41,14 @@ class TodoList extends Component {
     }
     componentDidMount() {
         console.log('componentDidMount');
-        axios.get('/user')
-            .then(function (response) {
-                // handle success
-                console.log(response);
+        axios.get('/api/todolist')
+            .then((res) => {
+                this.setState(()=>({
+                    list: [...res.data]
+                }))
             })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
+            .catch((err)=>{
+                console.log(err);
             })
     }
     componentWillReceiveProps() {
