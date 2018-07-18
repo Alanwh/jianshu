@@ -43,6 +43,7 @@ constructor()不算,这是es6自带的构造函数
 * render()
 * componentDidMount()
     * 组件挂载到页面之后自动执行
+    * ajax/fetch/axios 请求数据
 
 ### 更新阶段 (Updating)
 * componentWillReceiveProps() 
