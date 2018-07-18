@@ -1,12 +1,21 @@
 div{
-    transition: all 200ms ease-in;
-    color: blue;
+    color: red;
+    transition: all 1s ease-in;
 }
 .show{
     opacity: 1;
 }
 .hide{
     opacity: 0;
+}
+span{
+    color: red;
+}
+.showAni{
+    animation: showItem 1s ease-in forwards;
+}
+.hideAni{
+    animation: hideItem 1s ease-in forwards;
 }
 button{
     padding: 6px 10px;
@@ -24,4 +33,32 @@ button:hover{
 }
 button:active{
     opacity: 1;
+}
+@keyframes hideItem {
+    0% {
+        opacity: 1;
+        color: red;
+    }
+    50% {
+        opacity: 0.5;
+        color: green;
+    }
+    100% {
+        opacity: 0;
+        color: blue;
+    }
+}
+@keyframes showItem {
+    0% {
+        opacity: 0;
+        color: blue;
+    }
+    50% {
+        opacity: 0.5;
+        color: green;
+    }
+    100% {
+        opacity: 1;
+        color: red;
+    }
 }

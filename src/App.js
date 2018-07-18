@@ -13,7 +13,10 @@ class App extends Component {
         return(
            <Fragment>
                <div className = {this.state.show ? 'show' : 'hide'}>hello</div>
+               <span className = {this.state.show ? 'showAni' : 'hideAni'}>hello</span>
+               <hr/>
                <button onClick={this.handleButton}>toggle</button>
+               
            </Fragment>
         )
     }
