@@ -1,38 +1,27 @@
-*{
-    margin: 0;
-    padding: 0;
+div{
+    transition: all 200ms ease-in;
+    color: blue;
 }
-.todolist{
-    margin:20px auto;
-    text-align: center;
-    color: #666;
-    font-size: 14px;
+.show{
+    opacity: 1;
 }
-.input{
-    outline: none;
-    width: 140px;
-    height: 20px;
-    line-height: 20px;
-    vertical-align: middle;
-    margin: 0 5px;
+.hide{
+    opacity: 0;
 }
 button{
-    border-color: #369;
-    background: #369;
-    padding: 2px 6px;
+    padding: 6px 10px;
+    background: #360;
     color: #fff;
-    vertical-align: middle;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    margin:10px 0;
+    opacity: 0.9;
+    cursor: pointer;
 }
-.showList{
-    width: 270px;
-    margin: 0 auto;
-    list-style: none;
+button:hover{
+    opacity: 0.8;
 }
-.showList li{
-    line-height: 30px;
-    padding-left: 10px;
-}
-.showList li:hover{
-    background: #369;
-    color: #fff;
+button:active{
+    opacity: 1;
 }
