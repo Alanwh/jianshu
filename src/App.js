@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React,{ Component } from 'react';
-
-class App extends Component {
-    render() {
-        return(
-            <div>
-                hello world!
-            </div>
-        )
-    }
-=======
 import React,{ Component,Fragment } from 'react';
 import './style.css';
 
@@ -37,7 +25,6 @@ class App extends Component {
             show: !this.state.show
         }))
     }
->>>>>>> animate
 }
 
 export default App;
